@@ -10,7 +10,7 @@ const products = [
   { id: '5', name: '21WN', price: 120, image: require('../assets/dress5.png') },
   { id: '6', name: 'Lopo', price: 120, image: require('../assets/dress6.png') },
   { id: '7', name: '21WN', price: 120, image: require('../assets/dress7.png') },
-  { id: '3', name: 'Iame', price: 120, image: require('../assets/dress7.png') },
+  { id: '8', name: 'Iame', price: 120, image: require('../assets/dress3.png') },
 ];
 
 const HomeScreen = ({ navigation }) => {
@@ -37,7 +37,7 @@ const HomeScreen = ({ navigation }) => {
         <Image source={require('../assets/Menu.png')} style={styles.icon} />
         <Image source={require('../assets/Logo.png')} style={styles.logo} />
         <View style={styles.headerIcons}>
-          <Image source={require('../assets/Search.png')} style={styles.icon} />
+          <Image source={require('../assets/Search.png')} style={[styles.icon, styles.searchIcon]} />
           <TouchableOpacity onPress={() => navigation.navigate('Cart')}>
             <Image source={require('../assets/shoppingBag.png')} style={styles.icon} />
           </TouchableOpacity>
@@ -91,6 +91,10 @@ const styles = StyleSheet.create({
   },
   headerIcons: {
     flexDirection: 'row',
+    alignItems: 'center',
+  },
+  searchIcon: {
+    marginRight: 20,  
   },
   headerRight: {
     flexDirection: 'row',
@@ -102,7 +106,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#ececec',
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: 5,
